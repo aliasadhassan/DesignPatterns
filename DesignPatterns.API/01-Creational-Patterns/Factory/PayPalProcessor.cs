@@ -6,6 +6,5 @@
         {
             return $"Rs. {amount} successfully processed via PayPal Gateway.";
         }
-    {
     }
 }
