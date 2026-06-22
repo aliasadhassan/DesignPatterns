@@ -10,6 +10,10 @@ This repository contains implementations of various software design patterns, ar
 
 Creational patterns focus on object creation mechanisms, trying to create objects in a manner suitable to the situation.
 
+*   **Abstract Factory Pattern**
+    *   **Purpose:** Provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+    *   **Benefits:** Guarantees product compatibility within a family, enforces consistent product generation, and cleanly isolates concrete implementation classes.
+    *   **Drawbacks:** Increases overall code complexity due to the high volume of new interfaces and implementation variants introduced.
 *   **Builder Pattern**
     *   **Purpose:** Separates the construction of a complex object from its representation so that the same construction process can create different representations.
     *   **Benefits:** Provides fine control over the construction steps, isolates complex construction code, and makes it easier to vary a product's internal representation.
@@ -37,6 +41,15 @@ Structural patterns explain how to assemble objects and classes into larger stru
     *   **Purpose:** Allows incompatible interfaces to work together by acting as a bridge between them.
     *   **Benefits:** Enables reuse of existing legacy classes without modifying their source code, clean separation of concerns, and high flexibility.
     *   **Drawbacks:** Increases overall code complexity by introducing new interfaces and adapter classes that need to be maintained.
+*   **Decorator Pattern**
+    *   **Purpose:** Dynamically attaches additional responsibilities or behaviors to an object at runtime without altering its structure.
+    *   **Real-World Analogy (The Phone Cover Concept):**
+        *   **Base Component (The Naked iPhone):** `BaseMessageService` — It performs the core function of sending a basic, plain message.
+        *   **Layer 1 (Glass Protector):** `LoggingMessageDecorator` — Wraps the phone to add protection (logs the exact timestamp of the message) while keeping the original phone intact.
+        *   **Layer 2 (Silicon Case):** `EncryptedMessageDecorator` — Wraps everything again to add a style layer (encrypts the message text into Base64 format).
+    *   **Benefits:** Adheres to the Single Responsibility Principle by breaking distinct behaviors into separate classes, providing a highly flexible alternative to rigid subclassing.
+    *   **Drawbacks:** Results in complex, nested wrapper initialization logic that can be tricky to trace and debug when multiple structural layers are active.
+    *   **Drawbacks:** Results in complex, nested initialization logic that can be confusing to debug when working with multiple wrapper layers.
 
 * * *
 

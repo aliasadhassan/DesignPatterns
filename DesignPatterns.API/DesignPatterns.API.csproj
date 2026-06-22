@@ -14,7 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="02-Structural-Patterns\" />
     <Folder Include="03-Behavioral-Patterns\" />
     <Folder Include="04-Architectural-Patterns\" />
     <Folder Include="05-Microservices-Patterns\" />
